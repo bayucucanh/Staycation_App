@@ -1,5 +1,6 @@
-import { Headers } from 'parts'
+import { Headers, Hero } from 'parts'
 import React, { Component } from 'react'
+import landingPage from "../../json/landingPage.json"
 
 export default class LandingPage extends Component {
   constructor(props) {
@@ -9,6 +10,7 @@ export default class LandingPage extends Component {
     return (
       <>
         <Headers {...this.props}></Headers>
+        <Hero data={landingPage.hero} />
       </>
     )
   }
