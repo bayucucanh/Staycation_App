@@ -1,10 +1,17 @@
-import 'assets/scss/style.scss'
-import { Button } from 'elements';
+import "assets/scss/style.scss";
+import { Button } from "elements";
+import LandingPage from "pages/LandingPage";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 function App() {
   return (
-    <div>
-      <Button />
-    </div>
+    <>
+      <Router>
+        <Routes>
+          <Route path="/" Component={LandingPage} />
+        </Routes>
+      </Router>
+    </>
   );
 }
 
